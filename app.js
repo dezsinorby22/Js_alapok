@@ -1,5 +1,3 @@
-/*global $, jQuery, alert*/
-
 
 // minden ami ebben a blokkban van az strict mode-ban lesz
 // a strict mode egy szigorubb mukodest eredmenyez, tobb esetben
@@ -7,36 +5,36 @@
 // read more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 (function () {
 // strict mode bekapcsolasa:
-'use strict';
+  'use strict';
 
-// console-ra kiirjuk a hello word stringet
-console.log("hello world");
-
-
-// kivalasztunk minden html elemet amin rajta van az image popup class
-// es meghivjuk rá a magnific popup fugvenyt
-// a fugveny bemeneti parametere egy object
-// ami a popup beallitasait tartalmazza
-$('.image-popup').magnificPopup({
-  type: 'image',
-  gallery: {
-    enabled: true
-  }
-});
+  // console-ra kiirjuk a hello word stringet
+  console.log('hello world');
 
 
+  // kivalasztunk minden html elemet amin rajta van az image popup class
+  // es meghivjuk rá a magnific popup fugvenyt
+  // a fugveny bemeneti parametere egy object
+  // ami a popup beallitasait tartalmazza
+  $('.image-popup').magnificPopup({
+    type: 'image',
+    gallery: {
+      enabled: true
+    }
+  });
 
-// minden hidden-image class-al rendelkező elemet elrejtünk
-// sima javascriptet használunk ehhez:
-[].forEach.call(document.querySelectorAll('.hidden'),
-  function (el) {
-    el.style.display = 'none';
-});
 
 
-// ez ugyanazt csinálja mint a fentebbi kód, csak ez
-// a jquery library segítségével:
-$('.hidden').css('display', 'none');
+  // minden hidden-image class-al rendelkező elemet elrejtünk
+  // sima javascriptet használunk ehhez:
+  [].forEach.call(document.querySelectorAll('.hidden'),
+    function (el) {
+      el.style.display = 'none';
+    });
+
+
+  // ez ugyanazt csinálja mint a fentebbi kód, csak ez
+  // a jquery library segítségével:
+  $('.hidden').css('display', 'none');
 
 
 }()); // end of strict mode
